@@ -1,74 +1,54 @@
-import React from 'react'
-import courasel1 from '../assets/img/carousel-1.jpg'
-import courasel2 from '../assets/img/carousel-2.jpg'
-
-function Courasel() {
+import React from 'react';
+import Carousel  from 'react-bootstrap/Carousel';
+import Courasel1 from '../assets/img/working-people.jpeg';
+import Courasel2 from '../assets/img/aerial-view.jpeg';
+import Courasel3 from '../assets/img/survey-tools.jpeg';
+  import Courasel4 from '../assets/img/background.jpeg';
+function CouraselComponent() {
   return (
-
-      <div className="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
-      <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img className="w-100" src={courasel1} alt="Image" />
-            <div className="carousel-caption">
-              <div className="container">
-                <div className="row">
-                  <div className="col-12 col-lg-6">
-                    <h1 className="display-3 text-dark mb-4 animated slideInDown">
-                      Insurance Creates Wealth For Everyone
-                    </h1>
-                    <p className="fs-5 text-body mb-5">
-                      Clita erat ipsum et lorem et sit, sed stet lorem sit clita
-                      duo justo magna dolore erat amet
-                    </p>
-                    <a href="" className="btn btn-primary py-3 px-5"
-                      >More Details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <img className="w-100" src={courasel2} alt="Image" />
-            <div className="carousel-caption">
-              <div className="container">
-                <div className="row">
-                  <div className="col-12 col-lg-6">
-                    <h1 className="display-3 text-dark mb-4 animated slideInDown">
-                      The Best Insurance Begins Here
-                    </h1>
-                    <p className="fs-5 text-body mb-5">
-                      Clita erat ipsum et lorem et sit, sed stet lorem sit clita
-                      duo justo magna dolore erat amet
-                    </p>
-                    <a href="" className="btn btn-primary py-3 px-5"
-                      >More Details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <Carousel>
+    <Carousel.Item>
+    <img src={Courasel1} className="d-block w-100" alt="First slide" />
+      <Carousel.Caption>
+      <div className="container courasel-content w-50">
+          <h1>Unlock the power of precision with our cutting-edge land surveying solutions</h1>
+          <p>Get a quote today and discover how we can elevate your project.</p>
+          <div className="action-buttons ">
+          <button className="btn btn-primary w-50 mr-5">Get A Quote</button>
+          <button className="btn btn-outline-primary w-50">Learn More</button>
         </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#header-carousel"
-          data-bs-slide="prev" >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#header-carousel"
-          data-bs-slide="next"  >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-  
-  )
+        </div>
+      
+      </Carousel.Caption>
+    </Carousel.Item>
+    <Carousel.Item >
+    <img src={Courasel2} className="d-block w-100" alt="First slide" />
+      <Carousel.Caption>
+      <div className="container courasel-content w-50">
+      <h1>Navigate the ever-changing landscape of land management with our innovative solutions, blending technology and expertise seamlessly</h1>
+         
+          <div className="action-buttons ">
+          <button className="btn btn-primary w-50 mr-5">Get A Quote</button>
+          <button className="btn btn-outline-primary w-50">Learn More</button>
+        </div>
+        </div>
+      </Carousel.Caption>
+    </Carousel.Item>
+    <Carousel.Item>
+    <img src={Courasel3} className="d-block w-100" alt="First slide" />
+      <Carousel.Caption>
+      <div className="container courasel-content w-50">
+          
+          <h1>Equip yourself with the latest surveying tools and expertise, ensuring accuracy and efficiency in every measurement, every time.</h1>
+          <div className="action-buttons ">
+          <button className="btn btn-primary w-50 mr-5">Get A Quote</button>
+          <button className="btn btn-outline-primary w-50">Learn More</button>
+        </div>
+        </div>
+      </Carousel.Caption>
+    </Carousel.Item>
+  </Carousel>
+  );
 }
 
-export default Courasel
+export default CouraselComponent;
