@@ -4,6 +4,10 @@ import TopBar from './components/TopBar';
 import NavBar from './components/NavBar';
 import CouraselComponent from './components/Courasel';
 import NavigationBar from './components/NavigationBar';
+import Footer from './components/Footer';
+import About from './components/About';
+import Services from './components/Services';
+import Projects from './components/Projects';
 import { useEffect, useState } from 'react';
 
 // import '../src/assets/styles/bootstrap.min.css';
@@ -12,43 +16,27 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import 'bootstrap/dist/js/bootstrap.js'
+import Facts from './components/Facts';
+import Features from './components/Features';
 
 
 
 function App() {
   const [isSticky, setIsSticky] = useState(false);
 
-  useEffect(() => {
-      const handleScroll = () => {
-          if (window.scrollY > 100) {
-              setIsSticky(true);
-          } else {
-              setIsSticky(false);
-          }
-      };
-
-      window.addEventListener('scroll', handleScroll);
-
-      return () => {
-          window.removeEventListener('scroll', handleScroll);
-      };
-  }, []);
+ 
   return (
     <div className="App ">
-      {/*
-      <NavBar/>
-      <Courasel/> */}
-      {isSticky ?App(
-        <>
-          <NavigationBar/>
-      <CouraselComponent/> 
-        </>
-      ):(  <>
-        <TopBar /> 
-      <NavigationBar/>
-      <CouraselComponent/>
-      </>  )}
-   
+      <TopBar />
+      <NavigationBar />
+      <CouraselComponent />
+      <About />
+      <Facts />
+      <Features />
+      <Services />
+      <Projects />
+      <Footer />
+      
       
     </div>
   );
