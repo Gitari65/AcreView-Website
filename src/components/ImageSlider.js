@@ -43,9 +43,9 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container team mt-1 pt-2 mb-3 image-slider">
       <div className="text-center">
-        <h1>Our Team</h1>
+        <h1 className=' mb-4 text-center'>Our Team</h1>
       </div>
       <Slider {...settings}>
         {staffData.map((staff, index) => (
