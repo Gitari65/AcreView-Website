@@ -1,6 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faLandmark, faTools, faMountain, faHandshake, faBuilding, faDraftingCompass, faGlobe, faTree, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import WOW from 'wowjs';
+import 'animate.css/animate.min.css';
 
+import { useEffect } from 'react';
 function Services() {
   const servicesData = [
     {
@@ -54,12 +57,15 @@ function Services() {
       icon: faCheckCircle
     }
   ];
-
+  useEffect(() => {
+    const wow = new WOW.WOW();
+    wow.init();
+  }, []);
   return (
     <div>
       {/* <!-- Service Start --> */}
-      <div class="container-xxl py-5 services">
-        <div class="container">
+      <div class="container-xxl py-5 services ml-0">
+        <div class="container-fluid">
           <div class="text-center mx-auto title" style={{maxWidth: "500px"}}>
             <h1 class="display-6 mb-5 ">
               We Provide Expert Survey Solutions.
@@ -70,7 +76,7 @@ function Services() {
               <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay={`${0.1 * (index + 1)}s`} key={index}>
                 <div class="service-item rounded h-100 p-5">
                   <div class="d-flex align-items-center ms-n5 mb-4">
-                    <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                    <div class="service-icon flex-shrink-0  rounded-end me-4">
                       <FontAwesomeIcon icon={service.icon} className="text-light" size='3x' />
                     </div>
                     <h4 class="mb-0">{service.title}</h4>
