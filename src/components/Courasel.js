@@ -3,7 +3,7 @@ import Carousel  from 'react-bootstrap/Carousel';
 import Courasel1 from '../assets/img/working-people1.jpeg';
 import Courasel2 from '../assets/img/aerial-view.jpeg';
 import Courasel3 from '../assets/img/survey-tools1.jpeg';
-import landingImage1 from '../assets/img/landing-page1.jpeg';
+import landingImage1 from '../assets/img/background-6.png';
   import Courasel4 from '../assets/img/background.jpeg';
 function CouraselComponent() {
   return (
