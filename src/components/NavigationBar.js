@@ -2,39 +2,24 @@ import React from 'react'
 
 import logo from '../assets/img/acres-logo.png'
 // import'bootstrap/dist/css/bootstrap.min.css'
+import {Link} from 'react-router-dom'
+//import right arrow icon from fontawesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import TopBar from './TopBar'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
+
+
+const arrowIcon = <FontAwesomeIcon icon={faArrowRight} />
+const phoneIcon = <FontAwesomeIcon icon={faPhone} />
 
 function NavigationBar() {
   return (
     <>
-    {/* // <div className='navigation-bar' >
-    //   <div className='nav-bar-logo'>
-    //   <img src={logo} alt='logo' />
-    //   </div>
-    //   <div className='nav-bar-links '>
-    //     <a href='#' className='nav-link'>Home</a>
-    //     <a href='#' className='nav-link'>About Us</a>
-    //     <a href='#' className='nav-link'>Our Services</a>
-    //     <div className="nav-item dropdown">
-    //         <a
-    //           href="#"
-    //           className="nav-link dropdown-toggle"
-    //           data-bs-toggle="dropdown"
-    //           >Pages</a>
-    //         <div className="dropdown-menu bg-light border-0 m-0">
-    //           <a href="feature.html" className="dropdown-item">Features</a>
-    //           <a href="appointment.html" className="dropdown-item">Appointment</a>
-    //           <a href="team.html" className="dropdown-item">Team Members</a>
-    //           <a href="testimonial.html" className="dropdown-item">Testimonial</a>
-    //           <a href="404.html" className="dropdown-item">404 Page</a>
-    //         </div>
-    //       </div>
-    //     </div>
-    //     <div className='nav-bar-button'>
-    //     <button className='btn  px-3 d-none d-lg-block'>Get A Quote</button>
-    //     </div>
-         
-    // </div> */}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navigation-bar sticky-top">
+   
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navigation-bar navbar-default fixed-top mb-2 ">
+   
           <div class="container-fluid">
          <a>
           <img src={logo} alt='logo' />
@@ -46,26 +31,28 @@ function NavigationBar() {
             <div class="collapse navbar-collapse navigation-links" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <Link class="nav-link active" aria-current="page" to="/">Home</Link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About us</a>
+                  <Link class="nav-link" to="/about">About us</Link>
+                
+                
                 </li>
 
                
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Our Services</a>
+                  <Link class="nav-link" to="/services">Our Services</Link>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <Link class="nav-link dropdown-toggle" to="/projects" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Portfolio
-                  </a>
+                  </Link>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Projects</a></li>
+                    <li><Link class="dropdown-item" to="/projects">Projects</Link></li>
                     <li><hr class="dropdown-divider"></hr></li>
-                    <li><a class="dropdown-item" href="#">Staff and  Directors</a></li>
+                    <li><Link class="dropdown-item" to="/staff">Staff and  Directors</Link></li>
                     <li><hr class="dropdown-divider"></hr></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    {/* <li><a class="dropdown-item" href="#">Something else here</a></li> */}
                   </ul>
                   </li>
                 {/* <li class="nav-item dropdown">
@@ -82,15 +69,27 @@ function NavigationBar() {
                   
                 </li> */}
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contact us</a>
+                  <Link class="nav-link" to="/contacts">Contact us</Link>
                 </li>
                 {/* <li class="nav-item">
                   <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li> */}
               </ul>
               <form class="d-flex">
+              <div className='nav-bar-callus'>
+              <button className='btn  px-3 d-none d-lg-block'>
+              <a href='tel:+254729-569800'>
+               {phoneIcon} Call us: +254729-569800
+              </a>
+
+              </button>
+              </div>
               <div className='nav-bar-button'>
-              <button className='btn  px-3 d-none d-lg-block'>Get A Quote</button>
+              <button className='btn  px-3 d-none d-lg-block'>
+                <Link to='/contacts'>
+                <button>Get A Quote</button></Link>
+                {arrowIcon}
+              </button>
               </div>
               </form>
             </div>
