@@ -252,8 +252,8 @@ function Projects() {
   };
 
   return (
-    <div className='projects container align-items-center'>
-      <h1 className="text-center  mb-2">Our Projects</h1>
+    <div className='projects container align-items-center '>
+      <h1 className="text-center  ">Our Projects</h1>
       <p className="text-center text-description">Geo-acre surveys Ltd caters to a global clientele with diverse land management needs. Our extensive client roster includes renowned builders, developers, engineering firms, businesses, financial institutions, educational institutions, and government bodies.</p>
 
       <div className="row">
