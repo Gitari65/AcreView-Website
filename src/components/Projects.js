@@ -5,6 +5,7 @@ import image3 from '../assets/img/project3.JPG';
 import image4 from '../assets/img/project4.jpg';
 import image5 from '../assets/img/project5.JPG';
 import image6 from '../assets/img/project6.JPG';
+import imageDefault from '../assets/img/building.png'
 
 function Projects() {
   const [expandedProjectIndex, setExpandedProjectIndex] = useState(null);
@@ -152,7 +153,7 @@ function Projects() {
           commissioner of Lands will accord final approval to the subdivision. After the final approval, the
           developer then goes ahead to survey the plots to facilitate issuance of sub-titles
           `,
-          image: image6
+          image: imageDefault
           },     
               {
               title: 'Project 8',
@@ -180,7 +181,7 @@ function Projects() {
               short listed for the assignment. The contract was affected on signing the contract which was
               done on 17th June 2006.
               The team assigned with the project is on site undertaking the above assignment`,
-              image: image6
+              image: imageDefault
               },     {
                 title: 'Project 9',
                 company: 'KIRINYAGA DISTRICT CO-OPERATIVE UNION (KDCU)',
@@ -224,7 +225,7 @@ function Projects() {
                 The plot is then valued to determine the new rent for the extended term.
                 Documentation of the extended term is done either by way of endorsement or by way of
                 surrender and re-grant.`,
-                image: image6
+                image: imageDefault
                 },  {
                   title: 'Project 10',
                   company: 'EMBAJO PROPERTIES',
@@ -232,7 +233,7 @@ function Projects() {
                   description: `The assignment involved boundary beacons re-establishment, conducting a
                   topographical survey of parcel of land for planning purposes followed by ground demarcation.
                   `,
-                  image: image6
+                  image: imageDefault
                   },
   ];
   const totalPages = Math.ceil(projects.length / projectsPerPage);
@@ -275,7 +276,7 @@ function Projects() {
                     </div>
                     {expandedProjectIndex === currentPage * projectsPerPage + index && (
                       <>
-                        <img src={project.image} className="img-fluid" alt={project.title} />
+                        <img src={project.image} className="" id='company-logo' alt={project.title} />
                         <p className="card-text"><strong>Company:</strong> {project.company}</p>
                         <p className="card-text"><strong>Assignment:</strong> {project.assignment}</p>
                         <p className="card-text"><strong>Description:</strong> {project.description}</p>
