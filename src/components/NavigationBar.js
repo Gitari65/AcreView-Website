@@ -2,7 +2,7 @@ import React from 'react'
 
 import logo from '../assets/img/acres-logo.png'
 // import'bootstrap/dist/css/bootstrap.min.css'
-import {Link} from 'react-router-dom'
+import {Link,NavLink} from 'react-router-dom'
 //import right arrow icon from fontawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
@@ -31,26 +31,26 @@ function NavigationBar() {
             <div class="collapse navbar-collapse navigation-links" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <Link class="nav-link active" aria-current="page" to="/">Home</Link>
+                  <NavLink class="nav-link active" aria-current="page" to="/">Home</NavLink>
                 </li>
                 <li class="nav-item">
-                  <Link class="nav-link" to="/about">About us</Link>
+                  <NavLink class="nav-link" to="/about">About us</NavLink>
                 
                 
                 </li>
 
                
                 <li class="nav-item">
-                  <Link class="nav-link" to="/services">Our Services</Link>
+                  <NavLink class="nav-link" to="/services">Our Services</NavLink>
                 </li>
                 <li class="nav-item dropdown">
-                  <Link class="nav-link dropdown-toggle" to="/projects" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <NavLink class="nav-link dropdown-toggle" to="/projects" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Portfolio
-                  </Link>
+                  </NavLink>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><Link class="dropdown-item" to="/projects">Projects</Link></li>
+                    <li><NavLink class="dropdown-item" to="/projects">Projects</NavLink></li>
                     <li><hr class="dropdown-divider"></hr></li>
-                    <li><Link class="dropdown-item" to="/staff">Staff and  Directors</Link></li>
+                    <li><NavLink class="dropdown-item" to="/staff">Staff and  Directors</NavLink></li>
                     <li><hr class="dropdown-divider"></hr></li>
                     {/* <li><a class="dropdown-item" href="#">Something else here</a></li> */}
                   </ul>
@@ -69,7 +69,7 @@ function NavigationBar() {
                   
                 </li> */}
                 <li class="nav-item">
-                  <Link class="nav-link" to="/contacts">Contact us</Link>
+                  <NavLink class="nav-link" to="/contacts">Contact us</NavLink>
                 </li>
                 {/* <li class="nav-item">
                   <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -85,9 +85,9 @@ function NavigationBar() {
               </button>
               </div>
               <div className='nav-bar-button'>
-              <button className='btn  px-3 d-none d-lg-block'>
-                <Link to='/contacts'>
-                <button>Get A Quote</button></Link>
+              <button id='button-nav' >
+                <NavLink to='/contacts'>
+                <button >Get A Quote</button></NavLink>
                 {arrowIcon}
               </button>
               </div>
