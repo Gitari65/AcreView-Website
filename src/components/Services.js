@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faLandmark, faTools, faMountain, faHandshake, faBuilding, faDraftingCompass, faGlobe, faTree, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import WOW from 'wowjs';
 import 'animate.css/animate.min.css';
+import 'wowjs/css/libs/animate.css';
 
 import { useEffect } from 'react';
 function Services() {
@@ -58,8 +59,11 @@ function Services() {
     }
   ];
   useEffect(() => {
-    const wow = new WOW.WOW();
-    wow.init();
+    const wow = new WOW.WOW({live: false});
+    wow.init({
+      duration: 1000
+    });
+    
   }, []);
   return (
     <div>
