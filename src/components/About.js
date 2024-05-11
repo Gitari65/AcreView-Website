@@ -1,6 +1,6 @@
 import React from 'react'
 import Counter from './constants/Counter'
-import groupPhoto from '../assets/img/group-photo2.jpeg'
+import edipark from '../assets/img/edipark.jpeg'
 import support from '../assets/img/support.png'
 function About() {
   return (
@@ -16,7 +16,7 @@ function About() {
             >
               <img
                 className="position-absolute w-100 h-100"
-                src={groupPhoto}
+                src={edipark}
                 alt=""
                 style={{objectFit: "cover"}}
               />
@@ -75,7 +75,7 @@ function About() {
                     src={support}
                     alt=""
                   />
-                  <h5 className="mb-0">Call Us: +254729-569800</h5>
+                  <h5 className="mb-0 call-us">Call Us:<a href='tel: '> +254729-569800</a></h5>
                 </div>
               </div>
             </div>
