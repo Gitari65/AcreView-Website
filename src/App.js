@@ -23,12 +23,26 @@ import ImageSlider from './components/ImageSlider';
 import Header from './components/Header';
 import LandingPage from './components/LandingPage';
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
+import Clients from './components/Clients';
+import Missions from './components/Missions';
+import Background from './components/Background';
+import Loader from './components/constants/Loader';
+import { faL } from '@fortawesome/free-solid-svg-icons';
+
 
 
 
 
 function App() {
   const [isSticky, setIsSticky] = useState(false);
+  const [isLoading,setIsLoading]=useState(true);
+
+  useEffect(()=>{
+    const timer=setTimeout(()=>{
+      setIsLoading(false);
+    },2200)
+    return()=> clearTimeout(timer);
+  })
 
  
   return (
@@ -39,19 +53,26 @@ function App() {
       element={
        
         <div className="App  ">
-      <TopBar />
-      <NavigationBar />
-      <LandingPage/>
-      {/* <CouraselComponent /> */}
-      <About />
-      <Facts />
-      <Features />
-      <Services />
-          <Projects />
-       <Contact/>
-       <ImageSlider /> 
-     
-      <Footer />
+          <TopBar />
+          <NavigationBar />
+          {isLoading?(
+          <Loader/>
+            ):(
+              <>
+          <LandingPage/>
+              {/* <CouraselComponent /> */}
+            <About />
+            <Facts />
+            <Features />
+            <Services />
+                <Clients/>
+            <Contact/>
+            <ImageSlider /> 
+          
+            <Footer />
+            </>)}
+    
+    
      
       
       
@@ -65,18 +86,24 @@ function App() {
         <div className="App  ">
       <TopBar />
       <NavigationBar />
-      <LandingPage/>
-      {/* <CouraselComponent /> */}
-      <About />
-      <Facts />
-      <Features />
-      <Services />
-          <Projects />
-       <Contact/>
-       <ImageSlider /> 
-     
-      <Footer />
-     
+      {isLoading?(
+            <Loader/>
+          ):(
+            <>
+          <LandingPage/>
+              {/* <CouraselComponent /> */}
+              <About />
+              <Facts />
+              <Features />
+              <Services />
+                  <Projects />
+              <Contact/>
+              <ImageSlider /> 
+            
+              <Footer />
+            
+            </>)}
+    
       
       
     </div>
@@ -89,45 +116,81 @@ function App() {
         <div className="App  ">
           <TopBar />
           <NavigationBar />
-        <Header/>
-          <About />
-          <Facts />
-          <Features />
-          
-             
-          <Contact/>
+          {isLoading?(
+            <Loader/>
+          ):(
+            <>
+               <Header names={'About us'}/>
+              <Background/>
+                <About />
+                <Facts />
+                <Features />
+                <Contact/>
+                <Footer />
+            </>
        
-        
-          <Footer />
+          )}
      
-      
       
         </div>
       } />
+
+{/* lean more 
+<Route path='/learnmore' 
+      element={
+        <div className="App  ">
+          <TopBar />
+          <NavigationBar />
+          {isLoading?(
+            <Loader/>
+          ):(
+            <>
+        <Header names={'About us'}/>
+                <About />
+                <Facts />
+                <Features />   
+                <Contact/>
+                  <Footer />
+            </>)}
+      
+     
+        </div>
+      } /> */}
+
           {/* contact us */}
           <Route path='/contacts' 
       element={
         <div className="App  ">
           <TopBar />
           <NavigationBar />
-          <Header/>    
-       <Contact/>
-          <Footer />
-     
-      
-      
+          {isLoading?(
+            <Loader/>
+          ):(
+            <>
+          <Header names={'Our Contacts '}/>    
+              <Contact/>
+                  <Footer />
+            </>)}
+        
         </div>
       } />
+
            {/* prjects  */}
            <Route path='/projects' 
       element={
         <div className="App  ">
           <TopBar />
           <NavigationBar />
-          <Header/> 
-          <Projects/>   
-       <Contact/>
-          <Footer />
+          {isLoading?(
+            <Loader/>
+          ):(
+            <>
+        <Header names={'Our Projects '}/> 
+                  <Projects/>   
+              <Contact/>
+                  <Footer />
+            </>)}
+          
      
       
       
@@ -139,21 +202,62 @@ function App() {
         <div className="App  ">
           <TopBar />
           <NavigationBar />
-          <Header/> 
-          
-          <Services/>   
+          {isLoading?(
+            <Loader/>
+          ):(
+            <>
+          <Header names={'Our Services '}/> 
+                    
+                <Services/>   
+                   <Footer />
+              
+            </>)}
+         
+        </div>
+      } />
+
+          {/* staff  */}
+          <Route path='/staff' 
+      element={
+        <div className="App  ">
+          <TopBar />
+          <NavigationBar />
+          {isLoading?(
+            <Loader/>
+          ):(
+            <>
+              <Header names={'Staff Members'}/>
+              <ImageSlider/>
       
-          <Footer />
-     
-      
+                <Footer />
+            </>)}
+        
       
         </div>
       } />
 
-      
-         </Routes>
-
+       {/* staff  */}
+       <Route path='/client' 
+      element={
+        <div className="App  ">
+          <TopBar />
+          <NavigationBar />
+          {isLoading?(
+            <Loader/>
+          ):(
+            <>
+        <Header names={'Our Clients'}/>
+                <Clients/>
+              
+                  <Footer />
+                </>)}
+                
+            </div>
+          } />
+        
+        </Routes>
     </Router>
+        
     
   );
 }
