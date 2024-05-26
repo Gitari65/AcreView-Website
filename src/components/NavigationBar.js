@@ -85,11 +85,10 @@ function NavigationBar() {
               </button>
               </div>
               <div className='nav-bar-button'>
-              <button id='button-nav' >
+             
                 <NavLink to='/contacts'>
-                <button >Get A Quote</button></NavLink>
-                {arrowIcon}
-              </button>
+                <button id='button-nav' >Get A Quote   {arrowIcon}</button></NavLink>
+           
               </div>
               </form>
             </div>
