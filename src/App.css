@@ -169,10 +169,11 @@ Link:active{
   .navigation-bar .nav-bar-button #button-nav{
   
     border-radius: 10px;
-    padding: 1px 2px;
+    padding: 2px 4px;
     margin-right: 10px;
     font-size: 1.0rem;
-      width: fit-content;
+    height: 40px;
+     
     cursor: pointer;
   } 
   .nav-bar-button button{
@@ -188,6 +189,17 @@ Link:active{
     display: none;
   }
 }
+@media(max-width:500.98px){
+  .navigation-bar img{
+  src: url(./assets/img/acres-logo3.png);
+  }
+}
+/* @media (max-width: 991.98px) {
+  .navigation-bar img {
+    height: 70px;
+    width: 180px;
+  }
+} */
 /**Corasel**/
 
 
@@ -1375,10 +1387,5 @@ text-decoration: none;
 
 /**screen size**/
 /**small devuce below 992px**/
-@media (max-width: 991.98px) {
-  .navigation-bar img {
-    height: 70px;
-    width: 180px;
-  }
-}
+
   
