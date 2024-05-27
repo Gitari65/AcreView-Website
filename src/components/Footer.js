@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt, faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 //importing fontawesome icon twitter,facebook,youtube,linkedin
 import { faTwitter,faYoutube,faFacebook,faLinkedin} from '@fortawesome/free-brands-svg-icons'
+//import home icon from fontawesome
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 import logo from '../assets/img/logo.png'
 import {Link} from 'react-router-dom'
 
@@ -14,6 +16,7 @@ const twitterIcon = <FontAwesomeIcon icon={faTwitter} />
 const facebookIcon = <FontAwesomeIcon icon={faFacebook} />
 const youtubeIcon = <FontAwesomeIcon icon={faYoutube} />
 const linkedinIcon = <FontAwesomeIcon icon={faLinkedin} />
+const homeIcon = <FontAwesomeIcon icon={faHome} />
 
 
 
@@ -47,9 +50,9 @@ Geo-acre Surveys Limited (GAS) is a licensed company that provides specialized s
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
-            <h5 class="text-light mb-4">Address</h5>
+            <h5 class="footer-header mb-4">Address</h5>
             <p>
-              {locationIcon}  Head Office : 
+              {homeIcon}  Head Office : 
 Edipark Plaza, Thika Greens, Kandara Road . 
             </p>
             <p>
@@ -83,22 +86,22 @@ House 2nd floor.
             </div>
           </div> */}
                 <div class="col-lg-3 col-md-6">
-            <h5 class="text-light mb-4">Contact us</h5>
+            <h5 class=" mb-4 footer-header">Contact us</h5>
             <a className='contacts-link' href='tel:+254729-569800'>{callIcon} +254729-569800</a><p></p>
             <p>{emailIcon} geoacresurveys@yahoo.com</p>
             <br></br>
-            <h5 class="text-light mb-4">Opening Hours</h5>
+            <h5 class="footer-header mb-4">Opening Hours</h5>
                 <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
                 <p>Saturday: 8:00 AM - 1:00 PM</p>
                 <p>Sunday: Closed</p>
             </div>
             <div class="col-lg-3 col-md-6">
-            <h5 class="text-light mb-4">Quick Links</h5>
-            <Link class="btn btn-link" to="/about">About Us</Link>
-            <Link class="btn btn-link" to="/contacts">Contact Us</Link>
-            <Link class="btn btn-link" to="/services">Our Services</Link>
-            <Link class="btn btn-link" to="/">Terms & Condition</Link>
-            <Link class="btn btn-link" to="/contacts">Support</Link>
+            <h5 class="mb-4 footer-header ">Quick Links</h5>
+            <Link class=" quick-link" to="/about">About Us</Link><br></br>
+            <Link class=" quick-link" to="/contacts">Contact Us</Link><br></br>
+            <Link class=" quick-link" to="/services">Our Services</Link><br></br>
+            <Link class=" quick-link" to="/">Terms & Condition</Link><br></br>
+            <Link class=" quick-link" to="/contacts">Support</Link><br></br>
           </div>
          
       {/* <div class="col-lg-3 col-md-6">

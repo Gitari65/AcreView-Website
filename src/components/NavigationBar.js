@@ -50,7 +50,9 @@ function NavigationBar() {
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><NavLink class="dropdown-item" to="/projects">Projects</NavLink></li>
                     <li><hr class="dropdown-divider"></hr></li>
-                    <li><NavLink class="dropdown-item" to="/staff">Staff and  Directors</NavLink></li>
+                    <li><NavLink class="dropdown-item" to="/staff">Our Staffs  </NavLink></li>
+                    <li><hr class="dropdown-divider"></hr></li>
+                    <li><NavLink class="dropdown-item" to="/client">Our Clients  </NavLink></li>
                     <li><hr class="dropdown-divider"></hr></li>
                     {/* <li><a class="dropdown-item" href="#">Something else here</a></li> */}
                   </ul>

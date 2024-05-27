@@ -169,7 +169,7 @@ Link:active{
   .navigation-bar .nav-bar-button #button-nav{
   
     border-radius: 10px;
-    padding: 2px 4px;
+    padding: 2px 5px;
     margin-right: 10px;
     font-size: 1.0rem;
     height: 40px;
@@ -978,7 +978,7 @@ margin-top: 40px;
 }
 
 
-/**clients**/
+/**entents**/
 .client .content {
   text-align: center;
   margin-bottom: 20px;
@@ -994,8 +994,8 @@ margin-top: 40px;
   display: flex;
   margin: 0 auto;
   height: 15vh;
-  width: 40%;
-  border-radius: 5%;
+  width: 100%;
+ 
 }
 .client .container {
   margin: 0 auto;
@@ -1005,11 +1005,14 @@ margin-top: 40px;
 }
 .client .title {
   margin-left: 50px;
-  width: 70%;
+  width: 100%;
   font-size: 30px;
   padding: 20px;
   border-radius: 5px;
   font-size: 33px;
+}
+.client .image-container{
+  padding: 20%;
 }
 .client .description {
   margin: 20px auto;
@@ -1333,17 +1336,28 @@ margin-top: 40px;
   transition: .3s;
 }
 
-.footer .btn.btn-link::before {
+/* .footer .btn.btn-link::before {
   position: relative;
   content: "\f105";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   color: #A7A8B4;
   margin-right: 10px;
+} */
+.footer .footer-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--light);
+}
+.footer .quick-link{
+ color: var(--light);
+
+ margin-bottom: 10px;
 }
 
-.footer .btn.btn-link:hover {
-  color: var(--light);
+
+.footer .quick-link:hover {
+  color: var(--tertially);
   letter-spacing: 1px;
   box-shadow: none;
 }
